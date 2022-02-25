@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c0e01402b15d4f45ae67bbd2e63e0b4d" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="Model.Personnel" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Zone" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.Customer" Width="1.5" PointX="1.25" PointY="3.125" />
+        <EntityTypeShape EntityType="Model.Supplier" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.SupplierA" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.Tbank" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model.Tin" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.Ttout" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.TarckingList" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.Tracking" Width="1.5" PointX="5.375" PointY="7.75" />
+        <AssociationConnector Association="Model.TrackingTarckingList" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

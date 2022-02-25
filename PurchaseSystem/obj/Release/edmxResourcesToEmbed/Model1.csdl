@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Personnel">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Puser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ppass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Fairtech_DataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Personnels" EntityType="Self.Personnel" />
+    <EntitySet Name="Zones" EntityType="Model.Zone" />
+    <EntitySet Name="Customers" EntityType="Model.Customer" />
+    <EntitySet Name="Suppliers" EntityType="Model.Supplier" />
+    <EntitySet Name="SupplierAs" EntityType="Model.SupplierA" />
+    <EntitySet Name="Tbanks" EntityType="Model.Tbank" />
+    <EntitySet Name="Tins" EntityType="Model.Tin" />
+    <EntitySet Name="Ttouts" EntityType="Model.Ttout" />
+    <EntitySet Name="TarckingLists" EntityType="Model.TarckingList" />
+    <EntitySet Name="Trackings" EntityType="Model.Tracking" />
+    <AssociationSet Name="TrackingTarckingList" Association="Model.TrackingTarckingList">
+      <End Role="Tracking" EntitySet="Trackings" />
+      <End Role="TarckingList" EntitySet="TarckingLists" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Zone">
+    <Key>
+      <PropertyRef Name="Zid" />
+    </Key>
+    <Property Name="Zid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Zname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Zdetail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Cid" />
+    </Key>
+    <Property Name="Cid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Czone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="Sid" />
+    </Key>
+    <Property Name="Sid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Staxid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sbranch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sphone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Semail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Saddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SupplierA">
+    <Key>
+      <PropertyRef Name="Aid" />
+    </Key>
+    <Property Name="Aid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aphone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aemail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Adetail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbank">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Ttout">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TarckingList">
+    <Key>
+      <PropertyRef Name="KeyGen" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="KeyGen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tb" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Td" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Te" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tf" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tracking" Relationship="Model.TrackingTarckingList" FromRole="TarckingList" ToRole="Tracking" />
+  </EntityType>
+  <EntityType Name="Tracking">
+    <Key>
+      <PropertyRef Name="Tid" />
+    </Key>
+    <Property Name="Tid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tdate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tstatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Tper" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tsid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tsname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tstaxid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tsbranth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tsphone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tsemail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tsaddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tsa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tzid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tzname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tbank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tbankdate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ttotail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tvat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tvattatoil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ttatoill" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tla" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tlb" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tlc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tdetail" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tout" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TResult" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tf" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Tff" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Tdetaillist" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="R1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocDate" Type="DateTime" Precision="3" />
+    <Property Name="ReceiptDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TarckingLists" Relationship="Model.TrackingTarckingList" FromRole="Tracking" ToRole="TarckingList" />
+  </EntityType>
+  <Association Name="TrackingTarckingList">
+    <End Type="Model.Tracking" Role="Tracking" Multiplicity="1" />
+    <End Type="Model.TarckingList" Role="TarckingList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tracking">
+        <PropertyRef Name="Tid" />
+      </Principal>
+      <Dependent Role="TarckingList">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

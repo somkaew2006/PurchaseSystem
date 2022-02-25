@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Fairtech_DataEntities">
+    <EntitySetMapping Name="Personnels">
+      <EntityTypeMapping TypeName="Model.Personnel">
+        <MappingFragment StoreEntitySet="Personnel">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="Pname" ColumnName="Pname" />
+          <ScalarProperty Name="Puser" ColumnName="Puser" />
+          <ScalarProperty Name="Ppass" ColumnName="Ppass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zones">
+      <EntityTypeMapping TypeName="Model.Zone">
+        <MappingFragment StoreEntitySet="Zone">
+          <ScalarProperty Name="Zdetail" ColumnName="Zdetail" />
+          <ScalarProperty Name="Zname" ColumnName="Zname" />
+          <ScalarProperty Name="Zid" ColumnName="Zid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="Model.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Czone" ColumnName="Czone" />
+          <ScalarProperty Name="Cname" ColumnName="Cname" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="Model.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="Saddress" ColumnName="Saddress" />
+          <ScalarProperty Name="Semail" ColumnName="Semail" />
+          <ScalarProperty Name="Sphone" ColumnName="Sphone" />
+          <ScalarProperty Name="Sbranch" ColumnName="Sbranch" />
+          <ScalarProperty Name="Staxid" ColumnName="Staxid" />
+          <ScalarProperty Name="Sname" ColumnName="Sname" />
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierAs">
+      <EntityTypeMapping TypeName="Model.SupplierA">
+        <MappingFragment StoreEntitySet="SupplierA">
+          <ScalarProperty Name="Aline" ColumnName="Aline" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Adetail" ColumnName="Adetail" />
+          <ScalarProperty Name="Aemail" ColumnName="Aemail" />
+          <ScalarProperty Name="Aphone" ColumnName="Aphone" />
+          <ScalarProperty Name="Aname" ColumnName="Aname" />
+          <ScalarProperty Name="Aid" ColumnName="Aid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbanks">
+      <EntityTypeMapping TypeName="Model.Tbank">
+        <MappingFragment StoreEntitySet="Tbank">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tins">
+      <EntityTypeMapping TypeName="Model.Tin">
+        <MappingFragment StoreEntitySet="Tin">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ttouts">
+      <EntityTypeMapping TypeName="Model.Ttout">
+        <MappingFragment StoreEntitySet="Ttout">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TarckingLists">
+      <EntityTypeMapping TypeName="Model.TarckingList">
+        <MappingFragment StoreEntitySet="TarckingList">
+          <ScalarProperty Name="Tf" ColumnName="Tf" />
+          <ScalarProperty Name="Te" ColumnName="Te" />
+          <ScalarProperty Name="Td" ColumnName="Td" />
+          <ScalarProperty Name="Tc" ColumnName="Tc" />
+          <ScalarProperty Name="Tb" ColumnName="Tb" />
+          <ScalarProperty Name="Ta" ColumnName="Ta" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KeyGen" ColumnName="KeyGen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trackings">
+      <EntityTypeMapping TypeName="Model.Tracking">
+        <MappingFragment StoreEntitySet="Tracking">
+          <ScalarProperty Name="ReceiptDate" ColumnName="ReceiptDate" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="R1" ColumnName="R1" />
+          <ScalarProperty Name="Tdetaillist" ColumnName="Tdetaillist" />
+          <ScalarProperty Name="Tff" ColumnName="Tff" />
+          <ScalarProperty Name="Tf" ColumnName="Tf" />
+          <ScalarProperty Name="TResult" ColumnName="TResult" />
+          <ScalarProperty Name="Tout" ColumnName="Tout" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Tdetail" ColumnName="Tdetail" />
+          <ScalarProperty Name="Tlc" ColumnName="Tlc" />
+          <ScalarProperty Name="Tlb" ColumnName="Tlb" />
+          <ScalarProperty Name="Tla" ColumnName="Tla" />
+          <ScalarProperty Name="Ttatoill" ColumnName="Ttatoill" />
+          <ScalarProperty Name="Tvattatoil" ColumnName="Tvattatoil" />
+          <ScalarProperty Name="Tvat" ColumnName="Tvat" />
+          <ScalarProperty Name="Ttotail" ColumnName="Ttotail" />
+          <ScalarProperty Name="Tbankdate" ColumnName="Tbankdate" />
+          <ScalarProperty Name="Tbank" ColumnName="Tbank" />
+          <ScalarProperty Name="Tzname" ColumnName="Tzname" />
+          <ScalarProperty Name="Tzid" ColumnName="Tzid" />
+          <ScalarProperty Name="Tsa" ColumnName="Tsa" />
+          <ScalarProperty Name="Tsaddress" ColumnName="Tsaddress" />
+          <ScalarProperty Name="Tsemail" ColumnName="Tsemail" />
+          <ScalarProperty Name="Tsphone" ColumnName="Tsphone" />
+          <ScalarProperty Name="Tsbranth" ColumnName="Tsbranth" />
+          <ScalarProperty Name="Tstaxid" ColumnName="Tstaxid" />
+          <ScalarProperty Name="Tsname" ColumnName="Tsname" />
+          <ScalarProperty Name="Tsid" ColumnName="Tsid" />
+          <ScalarProperty Name="Tper" ColumnName="Tper" />
+          <ScalarProperty Name="Tstatus" ColumnName="Tstatus" />
+          <ScalarProperty Name="Tdate" ColumnName="Tdate" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
